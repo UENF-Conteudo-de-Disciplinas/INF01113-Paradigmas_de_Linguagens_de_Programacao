@@ -1,0 +1,10 @@
+{
+  "java.project.sourcePaths": [
+    "Mamifero",
+    "AparelhoEletronico",
+    "Casa",
+    "Livro",
+    "Planta",
+    "."
+  ]
+}

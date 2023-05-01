@@ -1,0 +1,366 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2020
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+
+\documentclass[12pt]{article}
+
+% inicio do preambulo
+% lista de pacotes a serem utilizados no documento
+\usepackage[brazil]{babel}    % nomes e titulos em portugu\^{e}s
+\usepackage[utf8]{inputenc}   % para os acentos direto do teclado
+\usepackage{amsmath}          % para simbolos matem\'{a}ticos
+\usepackage{here}
+\usepackage{graphicx}         % para graficos e imagens
+
+% \input{definicoes.tex}
+
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{url}
+
+\usepackage[brazilian,hyperpageref]{backref}
+% Configura\c{c}\~{o}es do pacote backref
+% Usado sem a op\c{c}\~{a}o hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'{a}gina(s):~}
+% Texto padr\~{a}o antes do n\'{u}mero das p\'{a}ginas
+\renewcommand{\backref}{}
+% Define os textos da cita\c{c}\~{a}o
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma cita\c{c}\~{a}o no texto.%
+	\or
+		Citado na p\'{a}gina #2.%
+	\else
+		Citado #1 vezes nas p\'{a}ginas #2.%
+	\fi}%
+% ---
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Modelo de Documento Simples \LaTeX},    % title
+    pdfauthor={Ausberto S. Castro Vera - CC-LCMAT-CCT-UENF},     % author
+    pdfsubject={Paradigmas de Linguagens de Programa\c{c}\~{a}o},   % subject of the document
+    pdfcreator={ASCV, WinEdt},   % creator of the document
+    pdfproducer={ASCV}, % producer of the document
+    pdfkeywords={Linguagens} {LaTeX} {Documentos}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}	
+
+
+
+\textwidth=15cm               % largura do texto
+
+%opening
+\title{\bf Modelo de Documento Simples \LaTeX}
+\author{\textsf{Prof. Ausberto S. Castro Vera} \\
+	            UENF - CCT - LCMAT \\
+	            Ci\^{e}ncia da Computa\c{c}\~{a}o
+	   }
+\date{Campos, RJ, \today}    % data. Pode ser \date{Janeiro, 2015}
+
+\begin{document}
+\maketitle     %faz o titulo usando dados do preambulo
+
+
+\begin{abstract}
+Este documento do tipo ARTIGO apresenta as constru\c{c}\~{o}es b\'{a}sicas do \LaTeX{}. Aqui s\~{a}o apresentadas as constru\c{c}\~{o}es b\'{a}sicas deste processador de textos: comandos b\'{a}sicos, material tabular, tabelas, figuras, f\'{o}rmulas matem\'{a}ticas, etc. O editor utilizado \'{e} o TeXstudio v2.12.14
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+
+
+
+\section{Primeira se\c{c}\~{a}o do documento}
+Este \'{e} um primeiro documento escrito utilizando o processador-linguagem \LaTeX{}. Para separar um par\'{a}grafo de outro \'{e} necess\'{a}rio deixar uma linha em branco.
+
+Um bom livro texto de consulta sobre o  \LaTeX \'{e} \cite{Kottwitz2011}. Tamb\'{e}m pode ser consultado \cite{Mittelbach2004}
+
+    \subsection{Comandos b\'{a}sicos}
+    Todo documento em  \LaTeX devem ter os seguintes comandos b\'{a}sicos:
+    \begin{verbatim}
+    \documentclass[ops]{tipoDoc}
+    ..................
+    \begin{document}
+    .................. texto principal ...
+
+    \end{document}
+    \end{verbatim}
+
+
+
+\section{Listas de itens}
+ \LaTeX permite criar tr\^{e}s tipos de listas: enumeradas, n\~{a}o enumeradas e descri\c{c}\~{o}es de itens
+    \subsection{Listas enumeradas}
+
+        \begin{enumerate}
+        	\item Computadores
+        	\item Impressoras
+        	\item Redes
+        \end{enumerate}
+
+
+
+     \subsection{Listas n\~{a}o enumeradas}
+       \begin{itemize}
+       	\item Brasil
+       	\item Bolivia
+       	\item B\'{e}lgica
+       	\item Bulgaria
+       	\item Bosnia
+       \end{itemize}
+
+
+
+    \subsection{Listas de descri\c{c}\~{a}o}
+
+       \begin{description}
+       	\item[Redes com cabeamento] Usando cabos
+       	\item[Redes Wireless] Redes sem fio usando protocolos 802.11abgn
+       	\item[Redes Internet] Rede mundial de computadores
+       \end{description}
+
+
+
+
+
+
+
+
+
+
+
+\section{Tabular}
+% % % % %---------------
+Material tabular \'{e} o texto que inclui linhas e colunas: \\
+\begin{tabular}{llc}
+	fruta & cor  & Pre\c{c}o R\$ \\
+	\hline
+	lim\~{a}o & verde &  3,40 \\
+	banana& amarelo & 1,85 \\
+	mam\~{a}o & laranja & 5,20
+\end{tabular}\\
+l=left(alinhado a esquerda), r = right (alinhado a direita) c= center (centralizado)
+
+
+
+
+\section{Tabelas}
+% % % % %---------------
+Observe que uma tabela, por exemplo, Tab.\ref{tabela} e \ref{tabela2},   tem outro formato:
+
+\begin{table}[H]     % H=aqui, nesta posi\c{c}\~{a}o dentro do texto
+	\centering
+	\caption{Exemplo de Frutas e seus pre\c{c}os} 	\label{tabela}
+	\begin{tabular}{llc}
+		fruta & cor  & Pre\c{c}o R\$ \\        %   o simbolo & separa colunas
+		\hline
+		lim\~{a}o & verde &  3,40 \\
+		banana& amarelo & 1,85 \\
+		mam\~{a}o & laranja & 5,20
+	\end{tabular}\\
+    {\small Fonte: O autor}
+\end{table}
+
+\begin{table}[H]     % H=aqui, nesta posi\c{c}\~{a}o dentro do texto
+	\centering
+	\caption{Exemplo de Frutas e seus pre\c{c}os} 	\label{tabela2}
+	\begin{tabular}{|l|l|c|}
+        \hline
+		fruta & cor  & Pre\c{c}o R\$ \\        %   o simbolo & separa colunas
+		\hline
+		lim\~{a}o & verde &  3,40 \\
+		banana& amarelo & 1,85 \\
+		mam\~{a}o & laranja & 5,20\\
+     	\hline
+	\end{tabular}\\
+    {\small Fonte: O autor}
+\end{table}
+
+\section{Figuras}
+% % % % %---------------
+As Fig.\ref{foto1}  e Fig.\ref{foto2} s\~{a}o exemplos de como inserir fotos e imagens em um documento \LaTeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\begin{center}
+		\caption{Este \'{e} um exemplo de figura em \LaTeX}
+		\label{foto1}
+		\includegraphics[angle=90,width=0.3\textwidth]{latex.png}
+		\includegraphics[angle=45,width=0.3\textwidth]{latex.png}	
+		\includegraphics[width=4cm]{latex.png}	\\		
+        {\small Fonte: O autor}
+	\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Matem\'{a}ticas}
+% % % % %---------------
+Qualquer f\'{o}rmula matem\'{a}tica dentro de um par\'{a}grafo come\c{c}a e termina com o s\'{\i}mbolo \$, por exemplo, $ x^2 + y^2 = z^2$. Para uma f\'{o}rmula matem\'{a}tica, como por exemplo, uma equa\c{c}\~{a}o, tem que ser utilizados dois s\'{\i}mbolos \$\$ no in\'{\i}cio e final:
+$$
+  w = \sum_{i=1}^{n} (x_{i}+y_{i})^{2}
+$$
+ou utilizar o ambiente \textit{equation}  :
+\begin{equation}
+  W = \sum_{i=1}^{n} (A_{i}+B_{i})^{2}
+\end{equation}
+Observe-se que na primeira, temos apenas uma f\'{o}rmula matem\'{a}tica e na segunda, temos uma equa\c{c}\~{a}o (numerada). Para ter uma equa\c{c}\~{a}o n\~{a}o numerada temos que adicionar um asterisco e utilizar o pacote {\tt amsmath} no pre\^{a}mbulo:
+\begin{equation*}
+  \lim_{x \to 0} (x^{2} - 3x + 6) = 4
+\end{equation*}
+
+	\subsection{Matrizes}
+	$$
+	A = \begin{matrix}
+        	\alpha     & \beta^{*}\\
+	        \gamma^{*} & \delta
+	    \end{matrix}
+	$$
+
+	$$
+	A = \begin{bmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{bmatrix}
+	$$
+
+	$$
+	A = \begin{Bmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{Bmatrix}
+	$$
+
+	$$
+	A = \begin{pmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{pmatrix}
+	$$
+
+	$$
+	A = \begin{vmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{vmatrix}
+	$$
+
+	$$
+	A = \begin{Vmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{Vmatrix}
+	$$
+
+	$$
+	A = \begin{bmatrix}
+	1     & 2 & 3 & x & y\\
+	4     & 5 & 6 & a & b\\
+	7     & 8 & 9 & m & n
+	\end{bmatrix}
+	$$
+
+
+\section{Usando refer\^{e}ncias bibliogr\'{a}ficas }
+Existem muitos pacotes para gerenciar as refer\^{e}ncias bibliogr\'{a}ficas no \LaTeX, por\'{e}m, os 3 mais conhecidas s\~{a}o: bibtex, natbib e biblatex. Aqui mostraremos um exemplo de como usar o Bib\TeX.
+
+Os livros textos de consulta mais utilizados s\~{a}o: \cite{Mittelbach2004}, \cite{Gratzer2014}, \cite{Kottwitz2011} e \cite{Dongen2012}.
+
+
+Textos podem ser citados de diferentes maneiras, por exemplo:
+\begin{itemize}
+	\item \citep{Mittelbach2004}
+	\item \citet{Mittelbach2004}
+	\item \citeauthor{Mittelbach2004}
+	\item \citealt{Mittelbach2004}
+\end{itemize}
+Para isto deve ser utilizado estes dois comandos:
+\begin{verbatim}
+\usepackage{natbib}
+..............
+\bibliographystyle{plainnat}
+\end{verbatim}
+
+
+
+
+
+
+
+
+
+\section{Ferramentas m\'{\i}nimas necess\'{a}rias}
+Consideramos como ferramentas m\'{\i}nimas para trabalhar com \LaTeX as seguintes:
+\begin{itemize}
+	\item Compilador MikTeX e pacotes \LaTeX, v2.9.6361 \\
+	\url{https://miktex.org/download#collapse264}
+
+	\item Editor dirigido pela sintaxe para \LaTeX: TeXstudio v2.12.6\\
+	\url{http://www.texstudio.org/}
+	
+	\item Gerenciador de Refer\^{e}ncias Bibliogr\'{a}ficas  JabRef v3.8.2 \\
+	\url{https://www.fosshub.com/JabRef.html}
+	
+	\item Leitor de arquivos PDF, Adobe Reader\\
+\end{itemize}
+
+
+     \subsection{Links interessantes}
+     \begin{itemize}
+     	\item CTAN \\
+     	\url{http://www.ctan.org/}
+     	
+     	\item wikiLaTeX \\
+     	 \url{http://en.wikibooks.org/wiki/LaTeX}
+     	
+     	\item \LaTeX/Bibliography Management \\
+           \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography\_Management}
+     	
+     	\item Bib\TeX \\
+     	 \url{http://en.wikipedia.org/wiki/BibTeX}
+     	
+     	\item ShareLaTeX \\
+     	\url{https://pt.sharelatex.com/learn/Main\_Page}
+     	
+     	\item LaTeX wiki \\
+     	\url{http://latex.wikia.com/wiki/Main\_Page}
+
+        \item LaTeX Color Definitions \\
+        \url{http://latexcolor.com/}
+     	
+     \end{itemize}
+
+
+
+\begin{figure}[H]
+	\begin{center}
+		\caption{Este \'{e} outro exemplo de figura em \LaTeX}
+		\label{foto2}
+		\includegraphics[width=0.3\textwidth]{latex2.png}
+		\includegraphics[angle=45,width=0.3\textwidth]{latex3.png}	\\	
+        {\small Fonte: O autor}
+	\end{center}
+\end{figure}
+
+
+
+% % % % Bibliografia
+
+\bibliographystyle{plainnat}
+\bibliography{bibliogr}
+
+\end{document}

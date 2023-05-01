@@ -1,0 +1,51 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2020
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+
+\documentclass[12pt]{article}
+
+% inicio do preambulo
+% lista de pacotes a serem utilizados no documento
+\usepackage[brazil]{babel}    % nomes e titulos em portugu\^{e}s
+\usepackage[utf8]{inputenc}   % para os acentos direto do teclado
+\usepackage{amsmath}          % para simbolos matem\'{a}ticos
+\usepackage{here}
+\usepackage{graphicx}         % para graficos e imagens
+
+\input{definicoes.tex}        % defini\c{c}\~{o}es do usu\'{a}rio
+
+%opening
+\title{\bf Modelo de Documento Simples}
+\author{\textsf{Prof. Ausberto S. Castro Vera} \\
+	            UENF - CCT - LCMAT \\
+	            Ci\^{e}ncia da Computa\c{c}\~{a}o
+	   }
+\date{Campos, RJ, \today}    % data. Pode ser \date{Janeiro, 2015}
+
+\begin{document}
+\maketitle     %faz o titulo usando dados do preambulo
+
+
+\begin{abstract}
+Este documento do tipo ARTIGO apresenta as constru\c{c}\~{o}es b\'{a}sicas do \LaTeX{}. Aqui s\~{a}o apresentadas as constru\c{c}\~{o}es b\'{a}sicas deste processador de textos: comandos b\'{a}sicos, material tabular, tabelas, figuras, f\'{o}rmulas matem\'{a}ticas, etc. O editor utilizado \'{e} o TeXstudio v2.12.14
+\end{abstract}
+
+\newpage
+\addcontentsline{toc}{section}{Sum\'{a}rio}
+\tableofcontents
+\newpage
+
+%%%%%%% ---------- Lista de arquivos do documento -----------
+\input{arquivo01.tex}
+\input{arquivo02.tex}
+%%%%%%-------------------------------------------------------
+
+
+%%%% Bibliografia
+\addcontentsline{toc}{section}{Refer\^{e}ncias}
+\bibliographystyle{plainnat}    % estilo de bibliografia
+\bibliography{bibliogr}         % arquivo: bibliogr.bib     deve estar presente na mesma pasta
+
+\end{document}

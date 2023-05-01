@@ -1,0 +1,12 @@
+04 Teste-JAVA
+Ausberto S. Castro Vera
+•
+16 de nov. Editado às 16 de nov.
+10 pontos
+Data de entrega: 16 de nov. 16:45
+Fazer  e excutar um programa COMPLETO na Lingaugem JAVA  relacionado a um dos seguintes objetos:
+laranja
+motorista
+caneta
+Notebook
+Escolher qualuqer IDE da sua preferência. O mprograma JAVA executando será apresentado individualmente a partir das 16:30hrs de 16/11/2021

@@ -1,0 +1,57 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2019
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+% Arquivo: definicoes.tex
+
+
+%
+
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{url}
+
+\usepackage[brazilian,hyperpageref]{backref}
+% Configura\c{c}\~{o}es do pacote backref
+% Usado sem a op\c{c}\~{a}o hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) p\'{a}gina(s):~}
+% Texto padr\~{a}o antes do n\'{u}mero das p\'{a}ginas
+\renewcommand{\backref}{}
+% Define os textos da cita\c{c}\~{a}o
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma cita\c{c}\~{a}o no texto.%
+	\or
+		Citado na p\'{a}gina #2.%
+	\else
+		Citado #1 vezes nas p\'{a}ginas #2.%
+	\fi}%
+% ---
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Modelo de Documento Simples \LaTeX},    % title
+    pdfauthor={Ausberto S. Castro Vera - CC-LCMAT-CCT-UENF},     % author
+    pdfsubject={Paradigmas de Linguagens de Programa\c{c}\~{a}o},   % subject of the document
+    pdfcreator={ASCV, WinEdt},   % creator of the document
+    pdfproducer={ASCV}, % producer of the document
+    pdfkeywords={Linguagens} {LaTeX} {Documentos}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}	
+
+
+
+\textwidth=15cm               % largura do texto

@@ -1,0 +1,83 @@
+\babel@toc {brazil}{}\relax 
+{\pdfbookmark [0]{Sum\'ario}{toc}}
+\contentsline {part}{\@mypartnumtocformat {I}{Part One}}{3}{part.1}%
+\ttl@starttoc {default@1}
+\contentsline {chapter}{\numberline {1} Introdução}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Aspectos históricos da linguagem R}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}áreas de Aplicação da Linguagem}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1} Data Science}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2} Paradigmas}{7}{subsection.1.2.2}%
+\contentsline {subsubsection}{ Orientação a objetos}{7}{section*.2}%
+\contentsline {subsubsection}{ Programação Funcional}{8}{section*.3}%
+\contentsline {chapter}{\numberline {2} Conceitos básicos da Linguagem R}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Variáveis e constantes}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Variáveis}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Constantes}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Tipos de Dados Básicos}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Listas}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Ponto-ponto-ponto (Dot-dot-dot) (...)}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Tipo Qualquer (Any-type)}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Tipos de Dados de Coleção}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Vetores e Arrays}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Matrizes}{10}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Operações Lógicas}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Estrutura de Controle e Funções}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Estruturas de Controle}{11}{subsection.2.5.1}%
+\contentsline {subsubsection}{if}{11}{section*.4}%
+\contentsline {subsubsection}{switch}{12}{section*.5}%
+\contentsline {subsubsection}{looping}{12}{section*.6}%
+\contentsline {subsubsection}{repeat}{12}{section*.7}%
+\contentsline {subsubsection}{while}{12}{section*.8}%
+\contentsline {subsubsection}{for}{12}{section*.9}%
+\contentsline {chapter}{\numberline {3} Conceitos avançados da Linguagem R}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Módulos}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ambiente Global}{13}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Ambiente léxico}{13}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}A pilha de chamadas}{13}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Funções}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Objetos}{14}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Objeto Vetor}{14}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Objetos da Linguagem}{14}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Objeto Expressão}{14}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Objeto função}{14}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Objeto NULL (Nulo)}{15}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Objetos Embutidos e Formas Especiais}{15}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Objeto promessa (promise)}{15}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Objeto ambiente}{15}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Objeto Lista Pareada}{16}{subsection.3.3.9}%
+\contentsline {section}{\numberline {3.4}Classes}{16}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sub-rotinas}{16}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Aplicações da Linguagem R}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Operações básicas}{19}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descrição}{19}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Código}{19}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Imagens do código}{20}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Imagens do resultado compilado}{20}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Links e referencias bibliográficas das aplicações}{20}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Programas gráficos}{20}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Descrição}{20}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Código}{20}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Imagens do código}{20}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Imagens do resultado compilado}{20}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Links e referencias bibliográficas das aplicações}{20}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Programas com Objetos}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descrição}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Código}{20}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Imagens do código}{20}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Imagens do resultado compilado}{20}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Links e referencias bibliográficas das aplicações}{20}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}O algoritmo Quicksort - Implementação}{20}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Descrição}{20}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Código}{20}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Imagens do código}{20}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Imagens do resultado compilado}{20}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Links e referencias bibliográficas das aplicações}{20}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Aplicações com Banco de Dados}{20}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Descrição}{20}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Código}{20}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Imagens do código}{20}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Imagens do resultado compilado}{20}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Links e referencias bibliográficas das aplicações}{20}{subsection.4.5.5}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliografia}}{20}{subsection.4.5.5}%
+\contentsfinish 
+\contentsfinish 

@@ -1,0 +1,11 @@
+Quatro  Tipos de Parâmetros Formais em Linguagens de Programação
+Ausberto S. Castro Vera
+•
+28 de set.
+10 pontos
+Data de entrega: 5 de out. 13:59
+Defina completamente e mostre pelo menos 2 exemplos de:
+Parâmetros de Valor
+Parâmetros de Referência
+Parâmetros Procedimento
+Parâmetros Função

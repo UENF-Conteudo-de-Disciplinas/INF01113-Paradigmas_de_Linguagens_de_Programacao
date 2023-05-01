@@ -1,0 +1,49 @@
+A. Primeira Parte
+Ausberto S. Castro Vera
+•
+10 de ago. Editado às 11 de ago.
+10 pontos
+Data de entrega: 31 de ago. 15:59
+Introdução à Linguagem XYZ
+Bibliografia (arquivo *.bib)
+
+
+
+B. Segunda Parte - Aspectos Básicos
+Ausberto S. Castro Vera
+•
+10 de ago. Editado às 16 de set.
+10 pontos
+Data de entrega: 21 de set. 13:00
+Aspectos Básicos da Linguagem: variáveis, tipos de dados, controle de fluxo, etc.
+
+
+
+C. Terceira Parte - Aspectos Avanzados
+Ausberto S. Castro Vera
+•
+16 de set.
+10 pontos
+Data de entrega: 14 de out. 13:00
+módulos, funções, objetos, clases, subrotinas, etc.
+
+
+
+D. Quarta Parte - Aplicações
+Ausberto S. Castro Vera
+•
+21 de out. Editado às 21 de out.
+10 pontos
+Data de entrega: 4 de nov. 14:59
+
+
+
+E. Parte FINAL - Ferramentas e Conclusões
+Ausberto S. Castro Vera
+•
+21 de out.
+10 pontos
+Data de entrega: 30 de nov. 11:59
+Entregar o Relatorio Final PDF (incluindo a folha final de avaliação)
+
+O nome do arquivo deve ser o(s) Nome(s) do aluno. Ex. Priscila.PDF ou JoaoMarcos.PDF

@@ -1,0 +1,67 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2019
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+% Arquivo: TiposReferen.tex
+
+
+\section{Referenciando Refer\^{e}ncias Bibliogr\'{a}ficas}
+
+Segundo o Dicion\'{a}rio Online de Portugu\^{e}s \url{https://www.dicio.com.br/plagio/}, \textbf{plagio}, \'{e} a\c{c}\~{a}o de apresentar alguma coisa (trabalho, livro, teoria etc.) como se esta fosse de sua pr\'{o}pria autoria, embora tenha sido criada e/ou desenvolvida por outrem.
+
+Tamb\'{e}m, "o \textbf{pl\'{a}gio} (diz-se tamb\'{e}m plagiarismo ou plagiato) \'{e} o ato de assinar ou apresentar uma obra intelectual de qualquer natureza (texto, m\'{u}sica, obra pict\'{o}rica, fotografia, obra audiovisual, etc) contendo partes de uma obra que perten\c{c}a a outra pessoa sem colocar os cr\'{e}ditos para o autor original. No acto de pl\'{a}gio, o plagiador apropria-se indevidamente da obra intelectual de outra pessoa, assumindo a autoria" (\url{https://pt.wikipedia.org/wiki/Plagio}).
+
+Ent\~{a}o \textit{evitemos o plagio} escrevendo e refer\^{e}nciando corretamente nossos trabalhos!
+
+
+\subsection{Minhas ideais, minhas palavras}
+
+ \textbf{Escrever um documento t\'{e}cnico}, entende-se, \textit{um conjunto de atividades (processo) orientadas a criar um documento de v\'{a}rias p\'{a}ginas relacionadas a uma \'{a}rea cient\'{\i}fica ou tecnol\'{o}gica. Este documento deve ter um conte\'{u}do e  uma formata\c{c}\~{a}o adequada de acordo a certas normas t\'{e}cnicas (ABNT no Brasil, por exemplo)}.
+
+ O conte\'{u}do do par\'{a}grafo anterior n\~{a}o esta baseado especificamente em nenhuma refer\^{e}ncia. Apenas apresenta as ideias do autor sobre o que significa escrever um documento cient\'{\i}fico ou t\'{e}cnico.
+
+
+\subsection{Tomando como referencia outro documento}
+
+Segundo, \cite{Wright2010}, \textbf{escrever um documento t\'{e}cnico} \'{e} o processo de criar um documento que satisfa\c{c}a determinadas caracter\'{\i}sticas tais como: v\'{a}rias p\'{a}ginas, figuras e tabelas referenciadas no texto, se\c{c}\~{o}es l\'{o}gicas numeradas, lista de refer\^{e}ncias, lista de tabelas, lista de figuras e tabela de conte\'{u}dos (sum\'{a}rio).
+\begin{figure}[H]
+  \centering
+  \caption{Parte do artigo original de \cite{Wright2010}}
+  \includegraphics[width=12cm]{Escritatecnica.png}\\
+  \textit{\small Fonte: Recorte do autor}
+\end{figure}
+
+
+
+\subsection{Tomando como referencia outros documentos}
+
+Imagens de v\'{a}rios formatos podem ser inclu\'{\i}das em documentos \LaTeX{}. Tanto \cite{Kottwitz2011} bem como \cite{Kottwitz2015} afirmam que na inclus\~{a}o de imagens por meio de arquivos, n\~{a}o \'{e} necess\'{a}rio referenciar a extens\~{a}o do arquivo contendo a imagem (jpg, png, bmp, pdf, etc.)
+\begin{figure}[H]
+  \centering
+  \caption{Parte dos livros de \cite{Kottwitz2011} e  \cite{Kottwitz2015}}
+  \includegraphics[width=6cm]{beginers.png}\
+   \includegraphics[width=6cm]{cookbook.png}\\
+  \textit{\small Fonte: Recorte do autor}
+\end{figure}
+
+\subsection{Copiando literalmente parte de outro documento}
+
+Utilizando as normas ABNT, as \textbf{cita\c{c}\~{o}es diretas}, no texto, com mais de tr\^{e}s linhas, devem ser destacadas com recuo de 4 cm da margem esquerda, com letra menor que a do texto utilizado e sem as aspas. A cita\c{c}\~{a}o deve ir no in\'{\i}cio ou no final da cita\c{c}\~{a}o direta. Para isto lembre-se de usar o pacote \texttt{quoting} no pre\^{a}mbulo.
+\begin{verbatim}
+          \usepackage{quoting}
+          ....................
+          \begin{document}
+           ...................
+          \begin{quoting}[rightmargin=0cm,leftmargin=4cm]
+           \footnotesize
+            .......... citacao direta AQUI .............
+          \end{quoting}
+\end{verbatim}
+
+Por exemplo, uma cita\c{c}\~{a}o direta do livro de Leslie Lamport sobre o \LaTeX{}:
+    \begin{quoting}[rightmargin=0cm,leftmargin=4cm] \footnotesize 
+    \LaTeX{} \'{e} um sistema para tipografia de documentos. A sua primeira vers\~{a}o amplamente dispon\'{\i}vel. misteriosamente com o n\'{u}mero 2.09, apareceu em 1985. \LaTeX{} agora \'{e} extremamente popular mas comunidades cient\'{\i}ficas e acad\^{e}micas, e \'{e} utilizado extensivamente na industria. \LaTeX{} chegou a ser considerado a lingua franca (lingua de contato) do mundo cient\'{\i}fico; cientistas enviam seus papers eletronicamente para colegas ao redor do mundo na forma de arquivos \LaTeX{} \cite{lamport1994}.
+    \end{quoting}
+    
+

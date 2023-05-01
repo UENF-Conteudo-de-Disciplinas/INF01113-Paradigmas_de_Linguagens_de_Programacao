@@ -1,0 +1,5 @@
+Arquivo 2021 Scilab.PDF
+Executar no Ambiente (console) Scilab todos os exemplos desde os slides
+slides 19 até 41
+slide 47
+Fazer um print da imagem e salvar em um arquivo NomeAluno.DOC e postar como NomeAluno.PDF

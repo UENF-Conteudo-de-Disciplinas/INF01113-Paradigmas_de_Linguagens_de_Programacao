@@ -1,0 +1,49 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o - PROFMAT
+% Campos, RJ,  2013-2021
+% Curso de LaTeX - LCMAT - PROFMAT
+%
+
+
+\documentclass[article,  12pt, brazil]{abntex2}
+
+\usepackage[alf]{abntex2cite}
+
+\usepackage[24hr]{datetime}   % `data e tempo
+\usepackage{xcolor}
+
+
+
+
+\title{ Meu Primeiro Documento                \color{red} \LaTeX }
+\tituloestrangeiro{My First Document in \abnTeX}
+\author{   \textbf{Prof. Ausberto Castro Vera}
+       }
+\date{Compilado em \today\ \`{a}s \currenttime}    % data. Pode ser \date{Abril, 2021}
+
+
+\begin{document}
+\maketitle         %  para fazer o t\'{\i}tulo do documento
+
+
+\section{Introdu\c{c}\~{a}o}
+Para n\~{a}o dizer que n\~{a}o \textcolor{blue}{falei das}     flores ...
+
+
+\section{Matem\'{a}tica}
+
+\begin{itemize}
+  \item Matem\'{a}tica Computacional \cite{Yang2015}
+  \item Modelagem Matem\'{a}tica \cite{Bassanezi2015}
+  \item C\'{a}lculo Diferencial \cite{Guidorizzi2019}
+\end{itemize}
+
+
+
+
+
+%%%%-------------------  BIBLIOGRAFIA -------------------
+\bibliography{RefBiblio}   % Arquivos de Referencias bibliograficas *.bib construidos pelo JabRef
+%%%%-----------------------------------------------------
+
+\end{document} 

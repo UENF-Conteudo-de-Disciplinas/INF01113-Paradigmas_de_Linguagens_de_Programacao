@@ -1,0 +1,35 @@
+[10:39, 16/11/2021] Ausberto Professor UENF CC: Hoje teremos AULA-TESTE as 16:00hrs
+[10:40, 16/11/2021] Ausberto Professor UENF CC: Cada um deve CONSTRUIR um programa COMPLETO em JAVA sobre os seguintes OBJETOS:
+- laranja
+- motorista
+- caneta
+- notebook
+
+Podem ser incluídos no programa outros objetos também (se quiser)
+[10:42, 16/11/2021] Ausberto Professor UENF CC: Objeto LARANJA:
+- Pedro Henrique
+- André do Vale
+- Ariany
+- Carlos Alberto
+- Daniel Brito
+[10:43, 16/11/2021] Ausberto Professor UENF CC: Objeto MOTORISTA:
+- Daniel de Faria
+- Daniel Terra
+- Eduardo Ferreira
+- Gabriel Marques
+- Isabely
+[10:45, 16/11/2021] Ausberto Professor UENF CC: Objeto CANETA:
+- Javier Ernesto
+- Jhonatan
+- João Bosco
+- João Vitor
+- José Lúcio
+[10:46, 16/11/2021] Ausberto Professor UENF CC: Objeto NOTEBOOK:
+- Larissa
+- Matheus
+- Nicole
+- Paulo Roberto
+- Yro
+- Alysson
+- Brandon
+[10:47, 16/11/2021] Ausberto Professor UENF CC: Tempo disponível: ATÉ as  16:30hrs

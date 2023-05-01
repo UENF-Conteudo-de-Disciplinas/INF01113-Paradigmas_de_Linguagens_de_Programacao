@@ -1,0 +1,108 @@
+\chapter{ Conceitos avançados da Linguagem R}
+  \begin{comment}
+    Prof. Dr. Ausberto S. Castro Vera
+    UENF - CCT - LCMAT - Curso de Ciência da Computação
+    Campos, RJ,  2021
+    Disciplina: Paradigmas de Linguagens de Programação
+    Data de entrega: 14 de out. 13:00
+    C. Terceira Parte - Aspectos Avanzados
+    módulos, funções, objetos, clases, subrotinas, etc.
+    Segundo \cite{Sebesta2018}, a linguagem R
+  \end{comment}
+	Todos os conceitos avançados abordados abaixo foram retirados do \href{https://cran.r-project.org/doc/manuals/r-release/fullrefman.pdf}{manual disponibilizado pelo próprio time de criadores da linguagem} \cite{Team2021}.
+  \section{Módulos}
+    \subsection{Ambiente Global}
+      O ambiente global é a raiz da área de trabalho do usuário. Um operação de atribuição a partir da linha de comando fará com que o objeto relevante pertença ao ambiente global. 
+    \subsection{Ambiente léxico}
+      Cada chamada para um função cria um quadro que contém as variáveis locais criadas na função e é avaliado em um ambiente, que em combinação cria um novo ambiente.
+      
+      Observe a terminologia: um quadro é um conjunto de variáveis, um ambiente é um aninhamento de quadros (ou de forma equivalente: o quadro mais interno mais o ambiente envolvente).
+      
+      Os ambientes podem ser atribuídos a variáveis ou estar contidos em outros objetos. No entanto, observe que eles não são objetos padrão - em particular, eles não são copiados na atribuição.
+    
+    \subsection{A pilha de chamadas}
+      Cada vez que um função é chamada, um novo quadro de avaliação é criado. A qualquer momento durante a computação, os ambientes atualmente ativos podem ser acessados por meio da pilha de chamadas . Cada vez que uma função é chamada, uma construção especial chamada de contexto é criada internamente e colocada em uma lista de contextos. Quando uma função termina de avaliar, seu contexto é removido da pilha de chamadas.
+      
+      Tornar as variáveis definidas mais altas na pilha de chamadas disponível é chamado escopo dinâmico. A ligação para uma variável é então determinada pela definição mais recente (no tempo) da variável. Isso contradiz as regras de escopo padrão em R, que usam as ligações no ambiente no qual a função foi definida (escopo léxico). Algumas funções, especialmente aquelas que usam e manipulam fórmulas de modelo, precisam simular o escopo dinâmico acessando diretamente a pilha de chamadas.
+      
+  \section{Funções}
+    Durante o uso de R para análise de dados, a maioria dos usuários se encontram querendo escrever suas próprias funções. Uma das vantagens do R é que eles podem até mudar o nome das funções em nível de sistema. Uma função pode ser criada seguindo a seguinte estrutura:
+		
+		\color{blue}
+		\begin{verbatim}
+    nomeDaFunção <- function(argumento1, argumento2, argumentoN) {expressões}
+
+\end{verbatim}
+\color{black}
+    %aprofundar quanto ao argumento ... e ao escopos
+  
+  \section{Objetos}    
+    \subsection{Objeto Vetor}
+      Vetores podem ser entendidos como células adjacentes que contém dados. Essas células podem ser acessadas a partir de um índice, tal qual x[5]. R tem 6 tipos básicos de vetores atômicos: lógico, inteiro, real, complexo, string (ou caractere) e cru (raw).
+    
+    \subsection{Objetos da Linguagem}
+      Existem três tipos de objetos que constituem a linguagem R. Elas são: chamadas (calls), expressões (expressions), e nomes (names). Expressões que são sintaticamente corretas são chamadas de afirmações (statements).
+    
+    \subsection{Objeto Expressão}
+      Em R, pode-se ter objetos do tipo "expression". Uma expressão contém uma ou mais instruções. Uma declaração é uma coleção sintaticamente correta de tokens. Os objetos de expressão são objetos de linguagem especial que contêm instruções R analisadas, mas não avaliadas. A principal diferença é que um objeto de expressão pode conter várias dessas expressões. Outra diferença mais sutil é que os objetos do tipo "expression" são apenas avaliado quando explicitamente passado para eval, enquanto outros objetos de linguagem podem ser avaliados em alguns casos inesperados.
+      
+      Um objeto de expressão se comporta de maneira muito semelhante a uma lista e seus componentes devem ser acessados da mesma forma que os componentes de uma lista.
+    
+    \subsection{Objeto função}
+      Em R, as funções são objetos e podem ser manipuladas da mesma maneira que qualquer outro objeto. Funções (ou mais precisamente, encerramentos de função) têm três componentes básicos: uma lista formal de argumentos, um corpo e um ambiente. A lista de argumentos é uma lista de argumentos separados por vírgulas. Um argumento pode ser usado para especificar um valor padrão para um argumento. Este valor será usado se a função for chamada sem nenhum valor especificado para aquele argumento. O ... argumento é especial e pode conter qualquer número de argumentos. Geralmente é usado se o número de argumentos for desconhecido ou nos casos em que os argumentos serão passados para outra função.
+      
+      O corpo é uma instrução R analisada. Geralmente é uma coleção de declarações entre colchetes, mas pode ser uma única declaração, um símbolo ou até mesmo uma constante.
+      
+      Uma função ambiente é o ambiente que estava ativo no momento em que a função foi criada. Todos os símbolos vinculados a esse ambiente são capturados e disponibilizados para a função. Essa combinação do código da função e das ligações em seu ambiente é chamada de 'encerramento de função', um termo da teoria da programação funcional. Neste documento, geralmente usamos o termo 'função', mas usamos 'encerramento' para enfatizar a importância do ambiente anexado.
+      
+      É possível extrair e manipular as três partes de um objeto de fechamento usando os construtos "formals", "body" e "environment" (todos os três podem também ser utilizadas no lado esquerdo das atribuições).
+      
+      Quando uma função é chamada, um novo ambiente (denominado ambiente de avaliação) é criado, cujo invólucro é o ambiente do fechamento da função. Esse novo ambiente é inicialmente preenchido com os argumentos não avaliados para a função; conforme a avaliação prossegue, as variáveis locais são criadas dentro dela.
+      
+      Também existe um recurso para converter funções de e para estruturas de lista usando "as.list" e "as.function". Eles foram incluídos para fornecer compatibilidade com a linguagem S e seu uso não é recomendado.
+    
+    \subsection{Objeto NULL (Nulo)}
+      Existe um objeto especial chamado NULL. É utilizado sempre que houver necessidade de indicar ou especificar que um objeto está ausente. Não deve ser confundido com um vetor ou lista de comprimento zero.
+      
+      O objeto NULL não tem tipo nem propriedades modificáveis. Existe apenas um objeto NULL em R, ao qual todas as instâncias se referem. Para testar se algum valor é NULL, use "is.null". Você não pode definir atributos NULL.
+    
+    \subsection{Objetos Embutidos e Formas Especiais}
+      Esses dois tipos de objeto contêm as funções da linguagem R, ou seja, aquelas que são exibidas como .Primitive em listagens de código. A diferença entre os dois está no tratamento do argumento. As funções embutidas têm todos os seus argumentos avaliados e passados para a função interna, de acordo com a chamada por valor , enquanto as funções especiais passam os argumentos não avaliados para a função interna.
+      
+      Da linguagem R, esses objetos são apenas outro tipo de função. A função "is.primitive" pode distinguí-los de funções interpretadas.
+    
+    \subsection{Objeto promessa (promise)}
+      Objetos de promessa são parte do mecanismo de avaliação preguiçoso de R. Eles contêm três slots: um valor, uma expressão e um ambiente. Quando um função é chamada, os argumentos são correspondidos e, em seguida, cada um dos argumentos formais está vinculado a uma promessa. A expressão fornecida para aquele argumento formal e um ponteiro para o ambiente a partir do qual a função foi chamada são armazenados na promessa.
+      
+      Até que esse argumento seja acessado, não há nenhum valor associado à promessa. Quando o argumento é acessado, a expressão armazenada é avaliado no ambiente armazenado, e o resultado é retornado. O resultado também é salvo pela promessa. A função "substitute" irá extrair o conteúdo do slot de expressão. Isso permite que o programador acesse o valor ou a expressão associada à promessa.
+      
+      Dentro da linguagem R, os objetos de promessa são quase apenas vistos implicitamente: os argumentos reais das funções são desse tipo. Também existe uma função "delayedAssign" que fará uma promessa a partir de uma expressão. Geralmente, não há como no código R verificar se um objeto é uma promessa ou não, nem há uma maneira de usar o código R para determinar o ambiente de uma promessa.
+
+    \subsection{Objeto ambiente}
+      Os ambientes podem ser considerados como consistindo em duas coisas. Um quadro , que consiste em um conjunto de pares símbolo-valor de  e um invólucro , um ponteiro para um ambiente delimitador. Quando R procura o valor de um símbolo, o quadro é examinado e, se um símbolo correspondente for encontrado, seu valor será retornado. Caso contrário, o ambiente envolvente é então acessado e o processo repetido. Os ambientes formam uma estrutura em árvore na qual os gabinetes desempenham o papel de pais. A árvore de ambientes está enraizada em um vazio ambiente, disponível através de emptyenv(), que não tem pai. É o pai direto do ambiente do pacote básico (função disponível através da baseenv()).
+      
+      Os ambientes são criados implicitamente por chamadas de função, conforme descrito em Objetos de função e ambiente lexical . Nesse caso, o ambiente contém as variáveis locais para a função (incluindo os argumentos) e seu invólucro é o ambiente da função chamada atualmente. Ambientes também podem ser criados diretamente por new.env. O conteúdo do quadro de um ambiente pode ser acessada através da utilização de "ls", "names", "\$", "[", "[[", "get", e "get0", e manipulado por "\$<-", "[[<-" e associado bem como "eval" e  "evalq".
+      
+      A função "parent.env" pode ser usada para acessar um ambiente.
+      
+      Ao contrário da maioria dos outros objetos R, os ambientes não são copiados quando passados para funções ou usados em atribuições. Assim, se você atribuir o mesmo ambiente a vários símbolos e alterar um, os outros também mudarão. Em particular, atribuir atributos a um ambiente pode levar a surpresas.
+    
+    \subsection{Objeto Lista Pareada}
+      Uma lista pareada (\textit{pairlist}) são usadas internamente na linguagem R, mas raramente visíveis no código interpretado. Pode ser criada pela função pairlist. Uma lista pareada de tamanho zero é nula. Mesmo sendo nula, cada objeto possui três espaços: o valor de CAR, o valor de CDR e o valor de TAG. O valor de TAG é uma linha de texto e CAR e CDR geralmente representam, respectivamente, o item no início da lista (cabeça) e o restante da lista (cauda) com um objeto NULL como valor final
+      
+      As lista pareadas são gerenciadas pela linguagem R da mesma forma que os vetores genéricos (listas). Os elementos são acessados usando a mesma sintaxe [[]]. O uso de listas pareadas está descontinuadas, visto que o uso de vetores genéricos são geralmente mais eficientes de se usar. Quando uma lista pareada interna é acessada do R, geralmente ela é convertida a um vetor genérico.
+    
+  \section{Classes}
+  	Como dito em \cite{Team2021b} R tem um sistema de classes elaborado, controlado principalmente por meio do atributo de classe. Este atributo é um vetor de caracteres que contém a lista de classes das quais um objeto herda. Isso forma a base da funcionalidade de "métodos genéricos" em R.
+    
+    Este atributo pode ser acessado e manipulado virtualmente sem restrição pelos usuários. Não há verificação de que um objeto realmente contém os componentes que os métodos de classe esperam. Assim, a alteração do atributo de classe deve ser feita com cautela, e devem ser preferidas as funções específicas de criação e coerção quando estiverem disponíveis.
+    
+  \section{Sub-rotinas}
+    Como também dito por \cite{Team2021b}, a sub-rotina (ou subprograma) define uma função usando uma sequência de declarações e definições que podem ser chamadas em diferentes localizações do programa. Quando duas tarefas executam a mesma sequência de operações, a sub-rotina associada a estes parâmetros é geralmente compartilhada pelas duas tarefas.
+    
+    R pertence a uma classe de linguagens de programação nas quais as sub-rotinas têm a capacidade de modificar ou construir outras sub-rotinas e avaliar o resultado como parte integrante da própria linguagem. Isso é semelhante ao Lisp e Scheme e outras linguagens da variedade de "programação funcional", mas em contraste com FORTRAN e a família ALGOL. A família Lisp leva este recurso ao extremo pelo paradigma "tudo é uma lista" no qual não há distinção entre programas e dados.
+    
+    R apresenta uma interface mais amigável para a programação do que o Lisp, pelo menos para alguém acostumado com fórmulas matemáticas e estruturas de controle do tipo C, mas o motor é realmente muito parecido com o Lisp. R permite acesso direto a expressões e funções e também permite que você as altere e posteriormente as execute, ou crie funções inteiramente novas a partir do zero.
+
+    Há uma série de aplicações padrão dessa facilidade, como cálculo de derivadas analíticas de expressões ou a geração de funções polinomiais a partir de um vetor de coeficientes.
+    No entanto, também existem usos que são muito mais fundamentais para o funcionamento da parte interpretada de R. Alguns deles são essenciais para a reutilização de funções como componentes em outras funções, como as chamadas (reconhecidamente não muito bonitas) ao "model.frame" que são construídas em várias rotinas de modelagem e plotagem. Outros usos simplesmente permitem interfaces elegantes para funcionalidade útil. Como exemplo, consideremos uma função de curva, que permite desenhar o gráfico de uma função dada como uma expressão como seno(x) ou as facilidades para plotar expressões matemáticas.

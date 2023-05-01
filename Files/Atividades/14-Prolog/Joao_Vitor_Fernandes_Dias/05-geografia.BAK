@@ -1,0 +1,183 @@
+%-------------------------------------------------%
+% programa  05-geografia.pl                       %
+% Prof. Ausberto S. Castro Vera                   %
+% Disciplina : Paradigmas de Ling. de Programacao %
+% UENF-CCT-LCMAT-CC                               %
+% Date:  23/set/2021                              %
+% Aluno: Joao Vitor Fernandes Dias                %
+%-------------------------------------------------%
+:-style_check(-discontiguous).
+
+% Geografia
+%
+%--------------  FATOS ---------------------------
+estado(acre, brasil).
+estado(amazonas, brasil).
+estado(rondonia, brasil).
+estado(roraima, brasil).
+estado(para, brasil).
+estado(amapa, brasil).
+estado(tocantins, brasil).
+estado(goias, brasil).
+estado(matogrosso, brasil).
+estado(matogrossodosul, brasil).
+estado(distritofederal, brasil).
+estado(parana, brasil).
+estado(santacatarina, brasil).
+estado(riograndedosul, brasil).
+estado(saopaulo, brasil).
+estado(riodejaneiro, brasil).
+estado(minasgerais, brasil).
+estado(espiritosanto, brasil).
+estado(bahia, brasil).
+estado(sergipe, brasil).
+estado(alagoas, brasil).
+estado(pernambuco, brasil).
+estado(paraiba, brasil).
+estado(riograndedonorte, brasil).
+estado(ceara, brasil).
+estado(piaui, brasil).
+estado(maranhao, brasil).
+
+vizinhos(acre,amazonas).
+vizinhos(acre,rondonia).
+vizinhos(rondonia,amazonas).
+vizinhos(rondonia,matogrosso).
+vizinhos(amazonas,matogrosso).
+vizinhos(amazonas,para).
+vizinhos(amazonas,roraima).
+vizinhos(roraima, para).
+vizinhos(amapa,para).
+vizinhos(para,matogrosso).
+vizinhos(para,tocantins).
+vizinhos(para,maranhao).
+vizinhos(tocantins,matogrosso).
+vizinhos(tocantins,goias).
+vizinhos(tocantins,bahia).
+vizinhos(tocantins,piaui).
+vizinhos(tocantins,maranhao).
+
+vizinhos(matogrosso,matogrossodosul).
+vizinhos(matogrosso,goias).
+vizinhos(distritofederal,goias).
+vizinhos(goias, bahia).
+vizinhos(goias, minasgerais).
+vizinhos(goias, matogrossodosul).
+vizinhos(matogrossodosul, parana).
+vizinhos(matogrossodosul, saopaulo).
+vizinhos(matogrossodosul, minasgerais).
+
+vizinhos(parana, saopaulo).
+vizinhos(parana, santacatarina).
+vizinhos(santacatarina, riograndedosul).
+
+vizinhos(saopaulo,minasgerais).
+vizinhos(saopaulo,riodejaneiro).
+vizinhos(riodejaneiro,minasgerais).
+vizinhos(riodejaneiro, espiritosanto).
+vizinhos(minasgerais, espiritosanto).
+vizinhos(minasgerais, bahia).
+vizinhos(espiritosanto,bahia).
+
+vizinhos(bahia,piaui).
+vizinhos(bahia,pernambuco).
+vizinhos(bahia,alagoas).
+vizinhos(bahia,sergipe).
+vizinhos(sergipe,alagoas).
+vizinhos(alagoas,pernambuco).
+vizinhos(pernambuco,piaui).
+vizinhos(pernambuco,ceara).
+vizinhos(pernambuco,paraiba).
+vizinhos(paraiba,ceara).
+vizinhos(paraiba,riograndedonorte).
+vizinhos(riograndedonorte,ceara).
+vizinhos(ceara, piaui).
+vizinhos(piaui, maranhao).
+vizinhos(piaui, maranhao).
+
+
+eh_pais_da(chile, america_do_sul).
+eh_pais_da(paraguai, america_do_sul).
+eh_pais_da(uruguai, america_do_sul).
+eh_pais_da(argentina, america_do_sul).
+eh_pais_da(brasil, america_do_sul).
+eh_pais_da(colombia, america_do_sul).
+eh_pais_da(equador, america_do_sul).
+eh_pais_da(peru, america_do_sul).
+eh_pais_da(bolivia, america_do_sul).
+eh_pais_da(venezuela, america_do_sul).
+eh_pais_da(guiana, america_do_sul).
+eh_pais_da(guianafrancesa, america_do_sul).
+
+pais_vizinho(brasil,uruguai).
+pais_vizinho(brasil,argentina).
+pais_vizinho(brasil,paraguai).
+pais_vizinho(brasil,bolivia).
+pais_vizinho(brasil,peru).
+pais_vizinho(brasil,colombia).
+pais_vizinho(brasil,venezuela).
+pais_vizinho(brasil,guiana).
+pais_vizinho(brasil,suriname).
+pais_vizinho(brasil,guianafrancesa).
+pais_vizinho(chile,argentina).
+pais_vizinho(chile,bolivia).
+pais_vizinho(chile,peru).
+pais_vizinho(uruguai,argentina).
+pais_vizinho(argentina,paraguai).
+pais_vizinho(argentina,bolivia).
+pais_vizinho(paraguai,bolivia).
+pais_vizinho(bolivia, peru).
+pais_vizinho(peru, equador).
+pais_vizinho(peru, colombia).
+pais_vizinho(equador, colombia).
+pais_vizinho(colombia, venezuela).
+pais_vizinho(venezuela, guiana).
+pais_vizinho(guiana, suriname).
+pais_vizinho(suriname, guianafrancesa).
+
+
+%
+%Completar o arquivo com fatos e regras de modo que ao consultar 
+%•  Viagem_nacional (X, Y) me indique a rota entre o estado X e o estado Y
+%•  Viagem_internacional (A, B), me indique a rota entre o país A e o país B
+
+%  REGRAS
+  limita_com_estado(X,Y):-  vizinhos(X,Y);vizinhos(Y,X).
+  limita_com_pais(X,Y):-    pais_vizinho(Y,X);pais_vizinho(Y,X).
+
+
+
+       
+       
+
+%  viagem_nacional(X ,Y):-         path_nacional(X,Y,_PATH).
+%  viagem_internacional(X ,Y):-    path_internacional(X,Y,_PATH).
+
+
+viagem_nacional(A,B,Path) :-
+       travel_nacional(A,B,[A],Q),
+       reverse(Q,Path).
+
+travel_nacional(A,B,P,[B|P]) :-
+       limita_com_estado(A,B).
+travel_nacional(A,B,Visited,Path) :-
+       limita_com_estado(A,C),
+       C \== B,
+       \+member(C,Visited),
+       travel_nacional(C,B,[C|Visited],Path).
+       
+       
+       
+       
+
+path_internacional(A,B,Path) :-
+       travel_internacional(A,B,[A],Q),
+       reverse(Q,Path).
+
+travel_internacional(A,B,P,[B|P]) :-
+       limita_com_pais(A,B).
+travel_internacional(A,B,Visited,Path) :-
+       limita_com_pais(A,C),
+       C \== B,
+       \+member(C,Visited),
+       travel_internacional(C,B,[C|Visited],Path).

@@ -1,0 +1,130 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2019
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+% Arquivo: arquivo01.tex
+
+
+
+\section{Primeira se\c{c}\~{a}o do documento}
+Este \'{e} um primeiro documento escrito utilizando o processador-linguagem \LaTeX{}. Para separar um par\'{a}grafo de outro \'{e} necess\'{a}rio deixar uma linha em branco.
+
+Um bom livro texto de consulta sobre o  \LaTeX \'{e} \cite{Kottwitz2011}. Tamb\'{e}m pode ser consultado \cite{Mittelbach2004}
+
+    \subsection{Comandos b\'{a}sicos}
+    Todo documento em  \LaTeX devem ter os seguintes comandos b\'{a}sicos:
+    \begin{verbatim}
+    \documentclass[ops]{tipoDoc}
+    ..................
+    \begin{document}
+    .................. texto principal ...
+
+    \end{document}
+    \end{verbatim}
+
+
+
+\section{Listas de itens}
+ \LaTeX permite criar tr\^{e}s tipos de listas: enumeradas, n\~{a}o enumeradas e descri\c{c}\~{o}es de itens
+    \subsection{Listas enumerdas}
+
+        \begin{enumerate}
+        	\item Computadores
+        	\item Impressoras
+        	\item Redes
+        \end{enumerate}
+
+
+
+     \subsection{Listas n\~{a}o enumeradas}
+       \begin{itemize}
+       	\item Brasil
+       	\item Bolivia
+       	\item B\'{e}lgica
+       	\item Bulgaria
+       	\item Bosnia
+       \end{itemize}
+
+
+
+    \subsection{Listas de descri\c{c}\~{a}o}
+
+       \begin{description}
+       	\item[Redes com cabeamento] Usando cabos
+       	\item[Redes Wireless] Redes sem fio usando protocolos 802.11abgn
+       	\item[Redes Internet] Rede mundial de computadores
+       \end{description}
+
+
+
+
+
+
+
+
+
+
+
+\section{Tabular}
+% % % % %---------------
+Material tabular \'{e} o texto que inclui linhas e colunas: \\
+\begin{tabular}{llc}
+	fruta & cor  & Pre\c{c}o R\$ \\
+	\hline
+	lim\~{a}o & verde &  3,40 \\
+	banana& amarelo & 1,85 \\
+	mam\~{a}o & laranja & 5,20
+\end{tabular}\\
+l=left(alinhado a esquerda), r = right (alinhado a direita) c= center (centralizado)
+
+
+
+
+\section{Tabelas}
+% % % % %---------------
+Observe que uma tabela, por exemplo, Tab.\ref{tabela} e \ref{tabela2},,   tem outro formato:
+
+\begin{table}[H]     % H=aqui, nesta posi\c{c}\~{a}o dentro do texto
+	\centering
+	\caption{Exemplo de Frutas e seus pre\c{c}os} 	\label{tabela}
+	\begin{tabular}{llc}
+		fruta & cor  & Pre\c{c}o R\$ \\        %   o simbolo & separa colunas
+		\hline
+		lim\~{a}o & verde &  3,40 \\
+		banana& amarelo & 1,85 \\
+		mam\~{a}o & laranja & 5,20
+	\end{tabular}\\
+    {\small Fonte: O autor}
+\end{table}
+
+\begin{table}[H]     % H=aqui, nesta posi\c{c}\~{a}o dentro do texto
+	\centering
+	\caption{Exemplo de Frutas e seus pre\c{c}os} 	\label{tabela2}
+	\begin{tabular}{|l|l|c|}
+        \hline
+		fruta & cor  & Pre\c{c}o R\$ \\        %   o simbolo & separa colunas
+		\hline
+		lim\~{a}o & verde &  3,40 \\
+		banana& amarelo & 1,85 \\
+		mam\~{a}o & laranja & 5,20\\
+     	\hline
+	\end{tabular}\\
+    {\small Fonte: O autor}
+\end{table}
+
+
+
+\section{Figuras}
+% % % % %---------------
+As Fig.\ref{foto1}  e Fig.\ref{foto2} s\~{a}o exemplos de como inserir fotos e imagens em um documento \LaTeX.
+\begin{figure}[H]
+	\begin{center}
+		\caption{Este \'{e} um exemplo de figura em \LaTeX}
+		\label{foto1}
+		\includegraphics[angle=90,width=0.3\textwidth]{latex.png}
+		\includegraphics[angle=45,width=0.3\textwidth]{latex.png}	
+		\includegraphics[width=4cm]{latex.png}	\\		
+        {\small Fonte: O autor}
+	\end{center}
+\end{figure} 

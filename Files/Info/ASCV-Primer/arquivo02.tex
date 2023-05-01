@@ -1,0 +1,158 @@
+% Prof. Dr. Ausberto S. Castro Vera
+% UENF - CCT - LCMAT - Curso de Ci\^{e}ncia da Computa\c{c}\~{a}o
+% Campos, RJ,  2013-2019
+% Disciplina: Paradigmas de Linguagens de Programa\c{c}\~{a}o
+
+% Arquivo: arquivo02.tex
+
+
+
+
+\section{Matem\'{a}ticas}
+% % % % %---------------
+Qualquer f\'{o}rmula matem\'{a}tica dentro de um par\'{a}grafo come\c{c}a e termina com o s\'{\i}mbolo \$, por exemplo, $ x^2 + y^2 = z^2$. Para uma f\'{o}rmula matem\'{a}tica, como por exemplo, uma equa\c{c}\~{a}o, tem que ser utilizados dois s\'{\i}mbolos \$\$ no in\'{\i}cio e final:
+$$
+  w = \sum_{i=1}^{n} (x_{i}+y_{i})^{2}
+$$
+ou utilizar o ambiente \textit{equation}  :
+\begin{equation}
+  W = \sum_{i=1}^{n} (A_{i}+B_{i})^{2}
+\end{equation}
+Observe-se que na primeira, temos apenas uma f\'{o}rmula matem\'{a}tica e na segunda, temos uma equa\c{c}\~{a}o (numerada). Para ter uma equa\c{c}\~{a}o n\~{a}o numerada temos que adicionar um asterisco e utilizar o pacote {\tt amsmath} no pre\^{a}mbulo:
+\begin{equation*}
+  \lim_{x \to 0} (x^{2} - 3x + 6) = 4
+\end{equation*}
+
+	\subsection{Matrizes}
+	$$
+	A = \begin{matrix}
+        	\alpha     & \beta^{*}\\
+	        \gamma^{*} & \delta
+	    \end{matrix}
+	$$
+
+	$$
+	A = \begin{bmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{bmatrix}
+	$$
+
+	$$
+	A = \begin{Bmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{Bmatrix}
+	$$
+
+	$$
+	A = \begin{pmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{pmatrix}
+	$$
+
+	$$
+	A = \begin{vmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{vmatrix}
+	$$
+
+	$$
+	A = \begin{Vmatrix}
+	\alpha     & \beta^{*}\\
+	\gamma^{*} & \delta
+	\end{Vmatrix}
+	$$
+
+	$$
+	A = \begin{bmatrix}
+	1     & 2 & 3 & x & y\\
+	4     & 5 & 6 & a & b\\
+	7     & 8 & 9 & m & n
+	\end{bmatrix}
+	$$
+
+
+\section{Usando refer\^{e}ncias bibliogr\'{a}ficas }
+Existem muitos pacotes para gerenciar as refer\^{e}ncias bibliogr\'{a}ficas no \LaTeX, por\'{e}m, os 3 mais conhecidas s\~{a}o: bibtex, natbib e biblatex. Aqui mostraremos um exemplo de como usar o Bib\TeX.
+
+Os livros textos de consulta mais utilizados s\~{a}o: \cite{Mittelbach2004}, \cite{Gratzer2014}, \cite{Kottwitz2011} e \cite{Dongen2012}.
+
+
+Textos podem ser citados de diferentes maneiras, por exemplo:
+\begin{itemize}
+	\item \citep{Mittelbach2004}
+	\item \citet{Mittelbach2004}
+	\item \citeauthor{Mittelbach2004}
+	\item \citealt{Mittelbach2004}
+\end{itemize}
+Para isto deve ser utilizado estes dois comandos:
+\begin{verbatim}
+\usepackage{natbib}
+..............
+\bibliographystyle{plainnat}
+\end{verbatim}
+
+
+
+
+
+
+
+
+
+\section{Ferramentas m\'{\i}nimas necess\'{a}rias}
+Consideramos como ferramentas m\'{\i}nimas para trabalhar com \LaTeX as seguintes:
+\begin{itemize}
+	\item Compilador MikTeX e pacotes \LaTeX, v2.9.6361 \\
+	\url{https://miktex.org/download#collapse264}
+
+	\item Editor dirigido pela sintaxe para \LaTeX: TeXstudio v2.12.6\\
+	\url{http://www.texstudio.org/}
+	
+	\item Gerenciador de Refer\^{e}ncias Bibliogr\'{a}ficas  JabRef v3.8.2 \\
+	\url{https://www.fosshub.com/JabRef.html}
+	
+	\item Leitor de arquivos PDF, Adobe Reader\\
+\end{itemize}
+
+
+     \subsection{Links interessantes}
+     \begin{itemize}
+     	\item CTAN \\
+     	\url{http://www.ctan.org/}
+     	
+     	\item wikiLaTeX \\
+     	 \url{http://en.wikibooks.org/wiki/LaTeX}
+     	
+     	\item \LaTeX/Bibliography Management \\
+           \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography\_Management}
+     	
+     	\item Bib\TeX \\
+     	 \url{http://en.wikipedia.org/wiki/BibTeX}
+     	
+     	\item ShareLaTeX \\
+     	\url{https://pt.sharelatex.com/learn/Main\_Page}
+     	
+     	\item LaTeX wiki \\
+     	\url{http://latex.wikia.com/wiki/Main\_Page}
+
+        \item LaTeX Color Definitions \\
+        \url{http://latexcolor.com/}
+     	
+     \end{itemize}
+
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{latex2.png}
+		\includegraphics[angle=45,width=0.3\textwidth]{latex3.png}		
+		\caption{Este \'{e} outro exemplo de figura em \LaTeX}
+		\label{foto2}
+	\end{center}
+\end{figure}
+
+

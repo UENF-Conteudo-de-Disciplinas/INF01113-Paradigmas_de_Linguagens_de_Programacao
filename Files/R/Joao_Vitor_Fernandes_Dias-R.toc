@@ -1,0 +1,63 @@
+\babel@toc {brazil}{}\relax 
+{\pdfbookmark [0]{Sum\'ario}{toc}}
+\contentsline {chapter}{\numberline {1} Introdução}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Aspectos históricos da linguagem R}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}áreas de Aplicação da Linguagem}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1} Data Science}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2} Paradigmas}{7}{subsection.1.2.2}%
+\contentsline {subsubsection}{ Orientação a objetos}{7}{section*.2}%
+\contentsline {subsubsection}{ Programação Funcional}{8}{section*.3}%
+\contentsline {chapter}{\numberline {2} Conceitos básicos da Linguagem R}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Variáveis e constantes}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Variáveis}{9}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Constantes}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Tipos de Dados Básicos}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Listas}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Ponto-ponto-ponto (Dot-dot-dot) (...)}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Tipo Qualquer (Any-type)}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Tipos de Dados de Coleção}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Vetores e Arrays}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Matrizes}{10}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Operações Lógicas}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Estrutura de Controle e Funções}{11}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Estruturas de Controle}{11}{subsection.2.5.1}%
+\contentsline {subsubsection}{if}{11}{section*.4}%
+\contentsline {subsubsection}{switch}{12}{section*.5}%
+\contentsline {subsubsection}{looping}{13}{section*.6}%
+\contentsline {subsubsection}{repeat}{13}{section*.7}%
+\contentsline {subsubsection}{while}{13}{section*.8}%
+\contentsline {subsubsection}{for}{13}{section*.9}%
+\contentsline {chapter}{\numberline {3} Conceitos avançados da Linguagem R}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Módulos}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ambiente Global}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Ambiente léxico}{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}A pilha de chamadas}{15}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Funções}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Objetos}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Objeto Vetor}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Objetos da Linguagem}{16}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Objeto Expressão}{16}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Objeto função}{16}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Objeto NULL (Nulo)}{17}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Objetos Embutidos e Formas Especiais}{17}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Objeto promessa (promise)}{17}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Objeto ambiente}{18}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Objeto Lista Pareada}{18}{subsection.3.3.9}%
+\contentsline {section}{\numberline {3.4}Classes}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Sub-rotinas}{18}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Aplicações da Linguagem R}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Operações básicas}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Programas gráficos}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Programas com Objetos}{26}{section.4.3}%
+\contentsline {section}{\numberline {4.4}O algoritmo Quicksort - Implementação}{28}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Aplicações com Banco de Dados}{30}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Ferramentas existentes e utilizadas}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}R GUI}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}RStudio Desktop}{35}{section.5.2}%
+\contentsline {section}{\numberline {5.3}RStudio Cloud}{36}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Visual Studio Code}{37}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Jupyter Notebook}{38}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Resumo}{38}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Conclusões}{39}{chapter.6}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliografia}}{41}{chapter*.10}%
+\contentsfinish 

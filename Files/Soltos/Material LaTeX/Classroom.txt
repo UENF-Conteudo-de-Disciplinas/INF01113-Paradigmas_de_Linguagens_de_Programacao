@@ -1,0 +1,8 @@
+Material LaTeX
+Ausberto S. Castro Vera
+•
+16 de jul.
+Livro
+Configurações para instalação (compilador MikTeX, editor TexStudio, gerenciador de referências e normas ABNT: JabRef)
+
+Não utilizar Overleaf

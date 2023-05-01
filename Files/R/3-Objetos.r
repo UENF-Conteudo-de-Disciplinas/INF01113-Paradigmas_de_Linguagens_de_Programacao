@@ -1,0 +1,67 @@
+#Link de acesso:
+#https://www.datacamp.com/community/tutorials/r-objects-and-classes
+#Autor: Olivia Smith, 22/06/2020
+#Acesso em: 29/11/2021
+#Código modificado por João Vítor Fernandes Dias, em 29/11/2021
+
+  #Objetos são instâncias de uma classe,
+  #mas em R, tudo é um objeto.
+  #Por exemplo, as variáveis já utilizadas
+  #até então são na verdade objetos.
+  
+  Bairro = "Bairro das Laranjeiras"
+  Rua = "Rua das Couves"
+  Numero = 123
+  Endereço = c(Bairro, Rua, Numero)
+  print(Endereço)
+
+#Quanto às classes, existem duas: S3 e S4
+
+#S3
+  #A classe S3 é mais genérica e não segue
+  #tanto os padrões de outras
+  #linguagens orientadas a objetos
+  #Primeiro se define uma listagem de
+  #características a uma variável
+  cachorro = list(Nome = "Bob", Idade = 5, Dono="Carlos")
+  #Depois define essa variável como sendo uma classe
+  class(cachorro) <- "ClasseCachorro"
+  print(cachorro)
+  #Pode-se definir um método à classe
+  latir <- function(object) {UseMethod("latir")}
+  latir.ClasseCachorro <- function(object) {print("Latindo")}
+  latir(cachorro)
+
+#S4
+  #A classe S4 é mais restrita e diretamente
+  #relacionada aos conceitos
+  #gerais de orientação a objetos.
+  #Primeiro é necessário utilziar a função
+  #setClass() com os parâmetros:
+  #Nome do objeto, slots= list(NomeDoAtributo1 =
+  #"tipoDoAtributo1", ...)
+  #para instanciar esta classe, usa-se a estrutura:
+  #nomeDoObjeto = new("NomeDaClasse",
+  #NomeDoAtributo1="ValorInicialDoAtributo1", ...)
+  setClass("Caneta", slots=list(Tinta="character",Capacidade="numeric"))
+  objetoCaneta = new("Caneta",Tinta="Preta", Capacidade=5)
+  print(objetoCaneta)
+  
+  #Pode-se acessar o valor de um atributo de
+  #uma classe utilizando o arroba (@)
+  objetoCaneta@Tinta
+  #Também é possível alterar este valor
+  objetoCaneta@Tinta = "Azul"
+  objetoCaneta
+  
+  #Assim como na classe S3, também podemos definir métodos:
+  setMethod("show","Caneta",
+    function(object) {
+      cat("Tinta:",object@Tinta, "\n")
+      cat("Capacidade:",object@Capacidade, "\n")
+      object@Capacidade = object@Capacidade - 1
+      print("Escrevendo\n")
+      cat("Capacidade:",object@Capacidade, "\n")
+    }
+  )
+  print(objetoCaneta)

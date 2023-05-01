@@ -1,0 +1,42 @@
+\begin{thebibliography}{Tea21b}
+
+\bibitem[Cha14]{Chambers2014}
+John~M. Chambers.
+\newblock {Object-Oriented Programming, Functional Programming and R}.
+\newblock {\em Statistical Science}, 29(2), May 2014.
+
+\bibitem[Egl09]{Eglen2009}
+Stephen~J. Eglen.
+\newblock {A Quick Guide to Teaching R Programming to Computational Biology
+  Students}.
+\newblock {\em {PLoS} Computational Biology}, 5(8):e1000482, August 2009.
+
+\bibitem[Gre18]{Gregor2018}
+Milos Gregor.
+\newblock Powered by r, May 2018.
+
+\bibitem[HW17]{HadleyWickham2017}
+Garrett~Grolemund Hadley~Wickham.
+\newblock {\em {R for Data Science}}.
+\newblock O'Reilly UK Ltd., January 2017.
+
+\bibitem[Kab15]{Kabacoff2015}
+Robert Kabacoff.
+\newblock {\em {R in Action}}.
+\newblock Manning, Special Sales Department, Manning Publications Co., 20
+  Baldwin Road, PO Box 761, Shelter Island, NY 11964, June 2015.
+
+\bibitem[Ove19]{Overflow2019}
+Stack Overflow.
+\newblock Developer survey results 2019, 2019.
+
+\bibitem[Tea21a]{Team2021b}
+R~Core Team.
+\newblock R language definition, November 2021.
+
+\bibitem[Tea21b]{Team2021}
+The R~Core Team.
+\newblock R: A language and environment for statistical computing, November
+  2021.
+
+\end{thebibliography}

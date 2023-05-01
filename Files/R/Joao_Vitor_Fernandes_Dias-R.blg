@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Joao_Vitor_Fernandes_Dias-R.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: alpha.bst
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+Database file #1: JVbib.bib
+Warning--can't use both author and editor fields in Kabacoff2015
+You've used 8 entries,
+            2543 wiz_defined-function locations,
+            612 strings with 5398 characters,
+and the built_in function-call counts, 2231 in all, are:
+= -- 201
+> -- 64
+< -- 8
++ -- 17
+- -- 16
+* -- 134
+:= -- 362
+add.period$ -- 20
+call.type$ -- 8
+change.case$ -- 38
+chr.to.int$ -- 7
+cite$ -- 9
+duplicate$ -- 105
+empty$ -- 203
+format.name$ -- 31
+if$ -- 455
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 39
+num.names$ -- 24
+pop$ -- 61
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 92
+stack$ -- 0
+substring$ -- 80
+swap$ -- 9
+text.length$ -- 8
+text.prefix$ -- 7
+top$ -- 0
+type$ -- 56
+warning$ -- 1
+while$ -- 17
+width$ -- 9
+write$ -- 93
+(There was 1 warning)

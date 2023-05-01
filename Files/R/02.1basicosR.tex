@@ -1,0 +1,258 @@
+\chapter{ Conceitos básicos da Linguagem R}
+  \begin{comment}
+      
+    Prof. Dr. Ausberto S. Castro Vera
+    UENF - CCT - LCMAT - Curso de Ciência da Computação
+    Campos, RJ,  2021
+    Disciplina: Paradigmas de Linguagens de Programação
+    Falta colocar as referências que foram:
+    https://cran.r-project.org/manuals.html
+    https://cran.r-project.org/doc/manuals/r-release/R-intro.html
+    https://cran.r-project.org/doc/manuals/r-release/R-lang.html
+    https://cran.r-project.org/doc/manuals/r-release/R-ints.html
+    http://www.lampada.uerj.br/arquivosdb/_book2/estruturas-b%C3%A1sicas-no-r.html#listas-list
+    Também existem as versões em PDF
+    Data de entrega: 21 de set. 15:59
+    Aspectos Básicos da Linguagem:
+    variáveis, tipos de dados, controle de fluxo, etc.
+
+    Os livros básicos para o estudo da Linguagem R são: \cite{Cotton2013}, \cite{Kabacoff2015}, \cite{Wickham2016}, e \cite{Lander2017}, \cite{Chang2019}
+    
+    Um site sobre Cursos básicos R é:\\
+    \url{https://didatica.tech/curso-de-r-online-para-iniciantes/}
+    
+    Neste capítulo é apresentado ....
+    
+    Segundo \cite{Sebesta2018}, a linguagem R,  . . .
+
+    De acordo com \cite{Sebesta2018} e \cite{roy04}, a linguagem R . . .
+    
+    \cite{Sebesta2018} afirma que a linguagem R . . .
+    
+    Considerando que a linguagem R (\cite{Sebesta2018}, \cite{wat90}) é considerada como ....
+  \end{comment}
+  
+  \section{Variáveis e constantes}
+    \subsection{Variáveis}
+      Variáveis são como caixinhas que guardam algo dentro de si. Em R, qualquer conjunto de símbolos pode ser uma variável, desde que siga uma regra:    \textit{O nome da variável deve começar com um ponto (.) ou uma letra. Caso comece com um ponto, o segundo caractere não pode ser um algarismo.}
+
+      As variáveis são \textit{case-sensitive} (sensíveis a maiúsculas e minúsculas) e portanto deve-se manter o uso padronizado de seus nomes. Outra característica das variáveis é que seus nomes podem ser efetivamente infinitos em tamanho.
+
+    \subsection{Constantes}
+     Qualquer número digitado diretamente é considerado uma \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Constants}{constante} \cite{Team2021b}, porém utilizá-las na forma numérica, pode não ser muito conveniente, por isso podemos também utilizar de símbolos para representar estes valores constantes.
+  \section{Tipos de Dados Básicos} 
+  	Retirado do
+  	\href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Basic-types}{site oficial da linguagem} \cite{Team2021b}.
+    \subsection{Listas}
+      Listas são vetores genéricos pois podem absorver diversos tipos diferentes simultaneamente. Listas podem ser acessadas por 3 operações de indexação diferentes. Listas são vetores e seu tipo básico de vetor são chamados de vetores atômicos que é necessário para apagar listas.
+      %aprofundar nas 3 indexações.
+    \subsection{Ponto-ponto-ponto (Dot-dot-dot) (...)}
+      O tipo de objeto "..." é guardado como um tipo da lista pareada. Os componentes do "..." podem ser acessados pela maneira padrão da lista pareada. Ele funciona como um espaço em branco que aceita o que for passado como argumento de uma função.
+        
+      Por exemplo, na função abaixo, a função addPercent permite o recebimento de uma variável indefinida representada pelo "..." e que é utilizada na função percent.
+      \color{blue}
+      \begin{verbatim}
+      	
+      	addPercent <- function(x, mult = 100, ...)
+      	{
+      		percent <- round(x * mult, ...)
+      		paste(percent, "\%", sep)
+      	}
+      \end{verbatim}
+      \color{black}
+    \subsection{Tipo Qualquer (Any-type)}
+      Não é possível que um objeto seja do tipo "nenhum", mas mesmo assim, é um valor válido para tipo. Ele é usado em algumas (raras) circunstâncias, como por exemplo em um vetor "\textbf{vector(x,"any")}" indicando que este tipo de estrutura com mais do que um elemento não deve ser usada.
+        
+      \begin{comment} 
+        \subsection{Objetos da Linguagem}
+          Existem três tipos de objetos que constituem a linguagem R. Elas são: chamadas (calls), expressões (expressions), e nomes (names). Expressões que são sintaticamente corretas são chamadas de afirmações (statements).
+        \subsection{Objeto Vetor}
+          Vetores podem ser entendidos como células adjacentes que contém dados. Essas células podem ser acessadas a partir de um índice, tal qual x[5]. R tem 6 tipos básicos de vetores atômicos: lógico, inteiro, real, complexo, string (ou caractere) e cru (raw).
+        \subsection{Objeto Expressão}
+          Em R, pode-se ter objetos do tipo "expression". Uma expressão contém uma ou mais instruções. Uma declaração é uma coleção sintaticamente correta de tokens. Os objetos de expressão são objetos de linguagem especial que contêm instruções R analisadas, mas não avaliadas. A principal diferença é que um objeto de expressão pode conter várias dessas expressões. Outra diferença mais sutil é que os objetos do tipo "expression" são apenas avaliado quando explicitamente passado para eval, enquanto outros objetos de linguagem podem ser avaliados em alguns casos inesperados.
+          Um objeto de expressão se comporta de maneira muito semelhante a uma lista e seus componentes devem ser acessados da mesma forma que os componentes de uma lista.
+        \subsection{Objeto função}
+          Em R, as funções são objetos e podem ser manipuladas da mesma maneira que qualquer outro objeto. Funções (ou mais precisamente, encerramentos de função) têm três componentes básicos: uma lista formal de argumentos, um corpo e um ambiente. A lista de argumentos é uma lista de argumentos separados por vírgulas. Um argumento pode ser usado para especificar um valor padrão para um argumento. Este valor será usado se a função for chamada sem nenhum valor especificado para aquele argumento. O ... argumento é especial e pode conter qualquer número de argumentos. Geralmente é usado se o número de argumentos for desconhecido ou nos casos em que os argumentos serão passados para outra função.
+          O corpo é uma instrução R analisada. Geralmente é uma coleção de declarações entre colchetes, mas pode ser uma única declaração, um símbolo ou até mesmo uma constante.
+          Uma função ambiente é o ambiente que estava ativo no momento em que a função foi criada. Todos os símbolos vinculados a esse ambiente são capturados e disponibilizados para a função. Essa combinação do código da função e das ligações em seu ambiente é chamada de 'encerramento de função', um termo da teoria da programação funcional. Neste documento, geralmente usamos o termo 'função', mas usamos 'encerramento' para enfatizar a importância do ambiente anexado.
+          É possível extrair e manipular as três partes de um objeto de fechamento usando os construtos "formals", "body" e "environment" (todos os três podem também ser utilizadas no lado esquerdo das atribuições).
+          Quando uma função é chamada, um novo ambiente (denominado ambiente de avaliação) é criado, cujo invólucro é o ambiente do fechamento da função. Esse novo ambiente é inicialmente preenchido com os argumentos não avaliados para a função; conforme a avaliação prossegue, as variáveis locais são criadas dentro dela.
+          Também existe um recurso para converter funções de e para estruturas de lista usando "as.list" e "as.function". Eles foram incluídos para fornecer compatibilidade com a linguagem S e seu uso não é recomendado.
+        \subsection{Objeto NULL (Nulo)}
+          Existe um objeto especial chamado NULL. É utilizado sempre que houver necessidade de indicar ou especificar que um objeto está ausente. Não deve ser confundido com um vetor ou lista de comprimento zero.
+          O objeto NULL não tem tipo nem propriedades modificáveis. Existe apenas um objeto NULL em R, ao qual todas as instâncias se referem. Para testar se algum valor é NULL, use "is.null". Você não pode definir atributos NULL.
+        \subsection{Objetos Embutidos e Formas Especiais}
+          Esses dois tipos de objeto contêm as funções da linguagem R, ou seja, aquelas que são exibidas como .Primitive em listagens de código. A diferença entre os dois está no tratamento do argumento. As funções embutidas têm todos os seus argumentos avaliados e passados para a função interna, de acordo com a chamada por valor , enquanto as funções especiais passam os argumentos não avaliados para a função interna.
+          Da linguagem R, esses objetos são apenas outro tipo de função. A função "is.primitive" pode distinguí-los de funções interpretadas.
+        \subsection{Objeto promessa (promise)}
+          Objetos de promessa são parte do mecanismo de avaliação preguiçoso de R. Eles contêm três slots: um valor, uma expressão e um ambiente. Quando um função é chamada, os argumentos são correspondidos e, em seguida, cada um dos argumentos formais está vinculado a uma promessa. A expressão fornecida para aquele argumento formal e um ponteiro para o ambiente a partir do qual a função foi chamada são armazenados na promessa.
+          Até que esse argumento seja acessado, não há nenhum valor associado à promessa. Quando o argumento é acessado, a expressão armazenada é avaliado no ambiente armazenado, e o resultado é retornado. O resultado também é salvo pela promessa. A função "substitute" irá extrair o conteúdo do slot de expressão. Isso permite que o programador acesse o valor ou a expressão associada à promessa.
+          Dentro da linguagem R, os objetos de promessa são quase apenas vistos implicitamente: os argumentos reais das funções são desse tipo. Também existe uma função "delayedAssign" que fará uma promessa a partir de uma expressão. Geralmente, não há como no código R verificar se um objeto é uma promessa ou não, nem há uma maneira de usar o código R para determinar o ambiente de uma promessa.
+        \subsection{Objeto ambiente}
+          Os ambientes podem ser considerados como consistindo em duas coisas. Um quadro , que consiste em um conjunto de pares símbolo-valor de  e um invólucro , um ponteiro para um ambiente delimitador. Quando R procura o valor de um símbolo, o quadro é examinado e, se um símbolo correspondente for encontrado, seu valor será retornado. Caso contrário, o ambiente envolvente é então acessado e o processo repetido. Os ambientes formam uma estrutura em árvore na qual os gabinetes desempenham o papel de pais. A árvore de ambientes está enraizada em um vazio ambiente, disponível através de emptyenv(), que não tem pai. É o pai direto do ambiente do pacote básico (função disponível através da baseenv()).
+          Os ambientes são criados implicitamente por chamadas de função, conforme descrito em Objetos de função e ambiente lexical . Nesse caso, o ambiente contém as variáveis locais para a função (incluindo os argumentos) e seu invólucro é o ambiente da função chamada atualmente. Ambientes também podem ser criados diretamente por new.env. O conteúdo do quadro de um ambiente pode ser acessada através da utilização de "ls", "names", "\$", "[", "[[", "get", e "get0", e manipulado por "\$<-", "[[<-" e associado bem como "eval" e  "evalq".
+          A função "parent.env" pode ser usada para acessar um ambiente.
+          Ao contrário da maioria dos outros objetos R, os ambientes não são copiados quando passados para funções ou usados em atribuições. Assim, se você atribuir o mesmo ambiente a vários símbolos e alterar um, os outros também mudarão. Em particular, atribuir atributos a um ambiente pode levar a surpresas.
+        \subsection{Objeto Lista Pareada}
+          Uma lista pareada (\textit{pairlist}) são usadas internamente na linguagem R, mas raramente visíveis no código interpretado. Pode ser criada pela função pairlist. Uma lista pareada de tamanho zero é nula. Mesmo sendo nula, cada objeto possui três espaços: o valor de CAR, o valor de CDR e o valor de TAG. O valor de TAG é uma linha de texto e CAR e CDR geralmente representam, respectivamente, o item no início da lista (cabeça) e o restante da lista (cauda) com um objeto NULL como valor final
+          As lista pareadas são gerenciadas pela linguagem R da mesma forma que os vetores genéricos (listas). Os elementos são acessados usando a mesma sintaxe [[]]. O uso de listas pareadas está descontinuadas, visto que o uso de vetores genéricos são geralmente mais eficientes de se usar. Quando uma lista pareada interna é acessada do R, geralmente ela é convertida a um vetor genérico.
+      
+      \end{comment}
+  \section{Tipos de Dados de Coleção}
+    \subsection{Vetores e Arrays}
+      Um vetor pode ser considerada como uma coleção de entradas de dados, por exemplo, numéricos. R permite facilidades simples para a criação e manipulação de matrizes e, em particular, o caso especial de matrizes.
+      
+      Um vetor de dimensão é um vetor de inteiros não negativos. Se o seu comprimento é k , em seguida, o array é k -dimensional, por exemplo uma matriz é um dois matriz -dimensional. As dimensões são indexadas de um até os valores dados no vetor de dimensão.
+      
+      Um vetor pode ser usado por R como uma array apenas se tiver um vetor de dimensão como seu atributo dim. Suponha, por exemplo, z é um vetor de 1.500 elementos. A atribuição
+      
+      \color{blue}
+      \begin{verbatim}
+      	dim (z) <- c (3,5,100)
+      \end{verbatim}
+      \color{black}
+      
+      dá a ele o atributo dim que permite que seja tratado como um array 3 por 5 por 100 .
+      
+      Outras funções como "matrix()" e "array()" estão disponíveis para atribuições mais simples e de aparência mais natural.
+      
+      Os valores no vetor de dados fornecem os valores no array na mesma ordem em que ocorreriam no FORTRAN, ou seja, “ordem principal da coluna”, com o primeiro subscrito movendo-se mais rápido e o último subscrito mais lento.
+      
+      Por exemplo, se o vetor de dimensão de uma matriz A, é, c(3,4,2)então há 3 * 4 * 2 = 24 entradas em A e o vetor de dados as mantém na ordem a[1,1,1], a[2,1,1], …, a[2,4,2], a[3,4,2].
+      
+      Os arrays podem ser unidimensionais: esses arrays geralmente são tratados da mesma maneira que os vetores (inclusive durante a impressão), mas as exceções podem causar confusão.
+    \subsection{Matrizes}
+      Assim como um vetor de índice em qualquer posição subscrita, uma matriz pode ser usada com uma única matriz de índice para atribuir um vetor de quantidades a uma coleção irregular de elementos no array ou para extrair uma coleção irregular como um vetor.
+
+      Um exemplo de matriz torna o processo claro. No caso de um array duplamente indexada, uma matriz de índice pode ser fornecida consistindo em duas colunas e tantas linhas quanto desejado. As entradas na matriz de índice são os índices de linha e coluna para o array duplamente indexado. 
+
+      Índices negativos não são permitidos em matrizes de índice. os valores NA e Zero são permitidos: as linhas na matriz de índice contendo um zero são ignoradas e as linhas que contêm um NA produzem um NA no resultado.
+
+      As matrizes de índice devem ser numéricas: qualquer outra forma de matriz (por exemplo, uma matriz lógica ou de caracteres) fornecida como uma matriz é tratada como um vetor de indexação.
+  \section{Operações Lógicas}
+    Operações lógicas são operações que se baseiam em lógica matemática para retornar verdadeiro ou falso. Alguns operadores são utilizados para este fim:
+    \begin{enumerate}
+      \item  <    Menor que, binário
+      \item  >    Maior que, binário
+      \item  ==    Igual a, binário
+      \item  >=    Maior ou igual a, binário
+      \item  <=    Menor ou igual a, binário
+      \item  \&    E, binário, vetorizado
+      \item  \&\&    E (curto-circuito), binário, não binário
+      \item  |    Ou, binário, binário
+      \item  ||    OU (curto-circuito), binário, não binário
+    \end{enumerate}
+
+    Um detalhe interessante para se adicionar é a utilidade do curto-circuito. Como se sabe-se pela lógica matemática: Numa sequência de conjunções, basta que uma expressão seja falsa para que seu resultado seja falso, logo, assim que um valor é dado como falso, as outras operações nem precisariam ser utilizadas. O mesmo vale para um valor verdadeiro em uma sequ~encia de disjunções.\textbf{}
+  \section{Estrutura de Controle e Funções}
+  	Esta seção sobre a estrutura de controle de funções foi retirada 
+  	\href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Constants}{do site oficial da linguagem} \cite{Team2021b}.
+    \subsection{Estruturas de Controle}
+      A computação em R consiste em avaliar instruções sequencialmente. As instruções podem ser separadas por ponto-e-vírgula ou por uma nova linha. Sempre que o código é executado com uma instrução sintaticamente completa, a declaração é avaliada e o valor retornado. O resultado da avaliação de uma declaração pode ser referido como o valor da declaração. O valor sempre pode ser atribuído a um símbolo.
+      
+      Tanto o ponto-e-vírgula quanto as novas linhas podem ser usados para separar instruções. Um ponto-e-vírgula sempre indica o final de uma instrução, enquanto uma nova linha pode indicar o final de uma instrução. Se a instrução atual não for sintaticamente completa, as novas linhas são simplesmente ignoradas.
+      
+      As declarações podem ser agrupadas usando colchetes '{' e '}'. Um grupo de instruções às vezes é chamado de bloco . As instruções únicas são avaliadas quando uma nova linha é digitada no final da instrução completa sintaticamente. Os blocos não são avaliados até que uma nova linha seja inserida após a chave de fechamento. No restante desta seção, declaração se refere a uma única declaração ou a um bloco.
+      
+      Veremos abaixo 5 estruturas de controle:
+
+      \subsubsection{if}      
+      	A estrutura \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#if}{\textbf{if}} \cite{Team2021b} avalia uma condição. Caso essa condição seja verdadeira, o primeiro agrupamento de instruções será executado. Senão, o segundo agrupamento que é executado.
+        Estrutura:
+        
+        \color{blue}
+        \begin{verbatim}
+        if (condição) {
+            Instruções que serão executadas caso a condição seja verdadeira
+        } else {
+            Instruções que serão executadas caso a condição seja falta
+        }
+        
+		    \end{verbatim}
+		\color{black}
+        A estrutura \textbf{if} retorna valor, então ela pode ser utilizada da seguinte forma:
+        
+        variável <- if (condição) 2 else 3
+        
+        Caso a condição seja verdadeira, a variável receberá o valor 2, senão, receberá o valor 3.
+        
+        A cláusula \textbf{else} é opcional, então é válido o exemplo
+        
+        \color{blue}
+        \begin{verbatim}
+        x <- if (condição) 4
+        
+    \end{verbatim}
+\color{black}
+        a sequência \textbf{if/else} também pode  ser encadeada:
+        
+        \color{blue}
+        \begin{verbatim}
+        if ( condicao1 ) {
+            funçõesA
+        } else if ( condicao2 ) {
+            funçõesB
+        } else if ( condicao3 ) {
+            funçõesC
+        } else
+        funçõesD
+        
+    \end{verbatim}
+\color{black}
+        Nesse exemplo, as condicionais são testadas sequencialmente. Caso a condição 1 seja verdadeira, as funções do bloco A são executadas, senão, a segunda condição é testada e assim por diante.
+
+      \subsubsection{switch} 
+      O \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#switch}{\textbf{switch}} \cite{Team2021b} serve como uma forma de simplificação da sequência encadeada de \textbf{if/else}. Porém com uma sintaxe um pouco diferente, visto que ela é uma função que segue a seguinte estrutura:
+        
+        \color{blue}
+        \begin{verbatim}
+        switch (variavel, caso1 = retorno1, caso2 = retorno2)
+        
+        y <- switch (x, fruta = "jabuticaba", vegetal = "cenoura", "Nenhum dos dois")
+        
+    	\end{verbatim}
+		\color{black}
+        Então, se a variável x for "fruta", a variável y recebe o valor "jabuticaba". Se o valor de x for "vegetal", y recebe "cenoura", senão, ele retorna "Nenhum dos dois". Caso não fosse definido um caso padrão, o valor retornado seria nulo, como no caso a seguir caso o valor de x seja "planta":
+        
+        \color{blue}
+        \begin{verbatim}
+        y <- switch (x, fruta = "jabuticaba", vegetal = "cenoura")
+        \end{verbatim}
+		\color{black}
+      \subsubsection{looping}  
+      
+       %%
+        R dispõe de 3 \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#Looping}{estruturas de repetição} \cite{Team2021b}, sendo elas \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#repeat}{\textbf{repeat}}, \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#while}{\textbf{\textbf{while}}} e \href{https://cran.r-project.org/doc/manuals/r-release/R-lang.html#for}{\textbf{\textbf{for}}}, Além delas, também podem ser utilizados os contrutos \textbf{next} e \textbf{break}. O \textbf{break} faz com que o loop onde ele esteja inserido seja encerrado. Já o \textbf{next} faz com que tudo a partir dele e antes do reinício da repetição (caso houvesse) seja pulado e a próxima repetição se inicie. O valor retornado pelos loops é sempre \textbf{NULL}.
+      \subsubsection{repeat}
+          A estrutura \textbf{repeat} é um loop contínuo que só cessará suas repetições quando um \textbf{break} o faça parar e segue a seguinte estrutura:
+          
+        repeat {instruções}
+      \subsubsection{while}
+        A estrutura \textbf{while} é similar a estrutura do \textbf{repeat} porém, tem uma variável de controle que permite que o loop aconteça enquanto essa condição seja verdadeira. Segue a seguinte estrutura:
+        
+        while (condicao) {instruções}
+      \subsubsection{for}
+        A estrutura \textbf{for} permite que todos os elementos de uma lista sejam percorridos seguindo a seguinte estrutura:
+              
+        for (elemento in listaDeElementos) {instruções}
+      \begin{comment}
+          \subsection{Funções}
+            Durante o uso de R para análise de dados, a maioria dos usuários se encontram querendo escrever suas próprias funções. Uma das vantagens do R é que eles podem até mudar o nome das funções em nível de sistema. Uma função pode ser criada seguindo a seguinte estrutura:
+
+            nomeDaFunção <- function(argumento1, argumento2, argumentoN) {expressões}
+
+            %aprofundar quanto ao argumento ... e ao escopos
+        \section{Módulos}
+          \subsection{Ambiente Global}
+            O ambiente global é a raiz da área de trabalho do usuário. Um operação de atribuição a partir da linha de comando fará com que o objeto relevante pertença ao ambiente global. 
+          \subsection{Ambiente léxico}
+            Cada chamada para um função cria um quadro que contém as variáveis locais criadas na função e é avaliado em um ambiente, que em combinação cria um novo ambiente.
+
+            Observe a terminologia: um quadro é um conjunto de variáveis, um ambiente é um aninhamento de quadros (ou de forma equivalente: o quadro mais interno mais o ambiente envolvente).
+
+            Os ambientes podem ser atribuídos a variáveis ou estar contidos em outros objetos. No entanto, observe que eles não são objetos padrão - em particular, eles não são copiados na atribuição.
+          \subsection{A pilha de chamadas}
+            Cada vez que um função é chamada, um novo quadro de avaliação é criado. A qualquer momento durante a computação, os ambientes atualmente ativos podem ser acessados por meio da pilha de chamadas . Cada vez que uma função é chamada, uma construção especial chamada de contexto é criada internamente e colocada em uma lista de contextos. Quando uma função termina de avaliar, seu contexto é removido da pilha de chamadas.
+
+            Tornar as variáveis definidas mais altas na pilha de chamadas disponível é chamado escopo dinâmico. A ligação para uma variável é então determinada pela definição mais recente (no tempo) da variável. Isso contradiz as regras de escopo padrão em R, que usam as ligações no ambiente no qual a função foi definida (escopo léxico). Algumas funções, especialmente aquelas que usam e manipulam fórmulas de modelo, precisam simular o escopo dinâmico acessando diretamente a pilha de chamadas.        
+      \end{comment}

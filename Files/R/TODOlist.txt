@@ -1,0 +1,39 @@
+actually to do:
+X-Escrever a conclusão				
+X-Inserir as imagens da parte de ferramentas
+X-Descomentar todas as páginas
+-Conferir todas as referências
+-ler comentários de ausberto
+-revisar
+
+
+things to improve:
+
+-
+03aplicR>programas básicos> codigo> 
+
+  #Entretanto, a estrutura IF ELSE apenas retorna um elemento
+  #Comentar sobre a estrutura IFELSE e seu uso em vetores
+
+
+-
+Change all pictures to the same folder
+separar entre as minhas e as de ausberto dentro dessa
+pictures
+|-JVFD
+|-ACSV
+-
+Colocar os códigos em uma mesma pasta
+-
+Colocar os .tex em uma mesma pasta
+-
+Ferramentas R> Conclusão>
+  		Pode-se substituir a listagem acima por uma tabelinha:
+  							Offline			Online
+  		Apenas R			RStudio Desktop		RStudio Cloud
+  		Várias linguagens	VSCode			Jupyter Notebook
+
+bugs to solve:
+03aplicR> programas gráficos> referência a imagem do código 2b tendo o mesmo número que a imagem do código 2a
+
+

@@ -1,0 +1,49 @@
+\begin{thebibliography}{Wat90}
+
+\bibitem[Cha19]{Chang2019}
+Winston Chang.
+\newblock {\em R Graphics Cookbook}.
+\newblock O'Reilly UK Ltd., {Sebastopol, CA}, 2 edition, February 2019.
+
+\bibitem[Cot13]{Cotton2013}
+Richard Cotton.
+\newblock {\em Learning R}.
+\newblock O'Reilly, Beijing Sebastopol, CA, 2013.
+
+\bibitem[Kab15]{Kabacoff2015}
+Robert Kabacoff.
+\newblock {\em R in action : data analysis and graphics with R}.
+\newblock Manning, Shelter Island, 2015.
+
+\bibitem[Lan17]{Lander2017}
+Jared Lander.
+\newblock {\em R for Everyone}.
+\newblock Addison-Wesley Data and Analytics Series. Pearson Education (US), New
+  York, NY, 2 edition, June 2017.
+
+\bibitem[RH04]{roy04}
+Peter~Van Roy and Seif Haridi.
+\newblock {\em Concepts, Techniques and Models of Computer Programming}.
+\newblock The MIT Press, Cambridge, 2004.
+
+\bibitem[Seb18]{Sebesta2018}
+Robert~W. Sebesta.
+\newblock {\em Conceitos de Linguagens de Programa{\c{c}}{\~a}o}.
+\newblock Bookman, Porto Alegre, 11 edition, 2018.
+
+\bibitem[SH12]{Sprankle2012}
+Maureen Sprankle and Jim Hubbard.
+\newblock {\em Problem solving and programming concepts}.
+\newblock Pearson Education, Inc., 9 edition, 2012.
+
+\bibitem[Wat90]{wat90}
+David~Anthony Watt.
+\newblock {\em Programming Language Concepts and Paradigms}.
+\newblock Prentice Hall International, London, 1990.
+
+\bibitem[WG16]{Wickham2016}
+Hadley Wickham and Garrett Grolemund.
+\newblock {\em R for data science}.
+\newblock O'Reilly Media, Sebastopol, CA, 1 edition, 2016.
+
+\end{thebibliography}

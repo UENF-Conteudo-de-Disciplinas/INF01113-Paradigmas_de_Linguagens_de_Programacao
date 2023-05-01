@@ -1,0 +1,5 @@
+https://cran.r-project.org/manuals.html
+https://cran.r-project.org/doc/manuals/r-release/R-intro.html
+https://cran.r-project.org/doc/manuals/r-release/R-lang.html
+https://cran.r-project.org/doc/manuals/r-release/R-ints.html
+http://www.lampada.uerj.br/arquivosdb/_book2/estruturas-b%C3%A1sicas-no-r.html#listas-list
